@@ -18,7 +18,7 @@
       homeConfigurations = {
         shooter = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ./bash.nix ];
+          modules = [ ./home.nix ./git.nix ];
         };
       };
     };

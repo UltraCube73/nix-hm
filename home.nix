@@ -6,6 +6,7 @@
       fortune
       cowsay
       lolcat
+      git
     ];
     username = "shooter";
     homeDirectory = "/home/shooter";

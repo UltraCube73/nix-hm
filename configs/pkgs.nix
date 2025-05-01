@@ -11,5 +11,6 @@
     qbittorrent
     vlc
     keepassxc
+    telegram-desktop
   ];
 }

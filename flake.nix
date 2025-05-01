@@ -12,10 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    catpuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, plasma-manager, catpuccin, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, plasma-manager, catppuccin, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -31,7 +31,7 @@
         ./configs/vscode.nix
         ./configs/catppuccin.nix
         inputs.plasma-manager.homeManagerModules.plasma-manager
-        catppuccin.homeManagerModules.catppuccina
+        catppuccin.homeModules.catppuccin
       ];
     };
   };

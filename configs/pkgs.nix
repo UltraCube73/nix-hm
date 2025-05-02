@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    irssi
     fortune
     cowsay
     lolcat

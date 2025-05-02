@@ -30,6 +30,7 @@
         ./configs/kde.nix
         ./configs/vscode.nix
         ./configs/catppuccin.nix
+        ./configs/librewolf.nix
         inputs.plasma-manager.homeManagerModules.plasma-manager
         catppuccin.homeModules.catppuccin
       ];

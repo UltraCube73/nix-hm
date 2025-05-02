@@ -1,21 +1,9 @@
+{ pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
     package = pkgs.librewolf;
     policies = {
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-      Preferences = {
-        "cookiebanners.service.mode.privateBrowsing" = 2;
-        "cookiebanners.service.mode" = 2;
-        "privacy.donottrackheader.enabled" = true;
-        "privacy.fingerprintingProtection" = true;
-        "privacy.resistFingerprinting" = true;
-        "privacy.trackingprotection.emailtracking.enabled" = true;
-        "privacy.trackingprotection.enabled" = true;
-        "privacy.trackingprotection.fingerprinting.enabled" = true;
-        "privacy.trackingprotection.socialtracking.enabled" = true;
-      };
       ExtensionSettings = {
         "jid1-ZAdIEUB7XOzOJw@jetpack" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/duckduckgo-for-firefox/latest.xpi";
@@ -24,6 +12,16 @@
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           installation_mode = "force_installed";
+        };
+        "foxyproxy@eric.h.jung" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4472757/foxyproxy_standard-9.2.xpi";
+          installation_mode = "force_installed";
+          private_browsing = "true";
+        };
+        "plasma-browser-integration@kde.org" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4298512/plasma_integration-1.9.1.xpi";
+          installation_mode = "force_installed";
+          private_browsing = "true";
         };
       };
     };

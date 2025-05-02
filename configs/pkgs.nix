@@ -6,7 +6,6 @@
     lolcat
     tree
     btop
-    librewolf
     filezilla
     qbittorrent
     vlc

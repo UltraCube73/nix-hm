@@ -31,6 +31,7 @@
         ./configs/vscode.nix
         ./configs/catppuccin.nix
         ./configs/librewolf.nix
+        ./configs/irssi.nix
         inputs.plasma-manager.homeManagerModules.plasma-manager
         catppuccin.homeModules.catppuccin
       ];

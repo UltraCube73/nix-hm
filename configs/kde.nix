@@ -45,5 +45,35 @@
         whenLaptopLidClosed = "hibernate";
       };
     };
+
+    panels = [
+      {
+        location = top;
+        widgets = [
+          {
+            kickoff = {
+              sortAlphabetically = true;
+              icon = "nix-snowflake";
+            };
+          }
+          {
+            iconTasks = {
+              launchers = [
+                "applications:org.kde.konsole.desktop"
+                "applications:org.kde.dolphin.desktop"
+                "applications:librewolf.desktop"
+                "applications:codium.desktop"
+                "applications:org.telegram.desktop.desktop"
+              ];
+            };
+          }
+          {
+            applicationTitleBar = {
+              //
+            };
+          }
+        ];
+      }
+    ];
   };
 }

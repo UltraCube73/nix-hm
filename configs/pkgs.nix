@@ -11,5 +11,15 @@
     vlc
     keepassxc
     telegram-desktop
+    fractal
+    openttd
+    krita
+    blender
+    obs-studio
+    libreoffice-still
+    dbeaver-bin
+    unar
+    p7zip
+    qrcode
   ];
 }

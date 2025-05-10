@@ -27,7 +27,7 @@
         ./home.nix
         ./configs/git.nix
         ./configs/pkgs.nix
-        ./configs/kde.nix
+        ./configs/kde/kde.nix
         ./configs/vscode.nix
         ./configs/catppuccin.nix
         ./configs/librewolf.nix

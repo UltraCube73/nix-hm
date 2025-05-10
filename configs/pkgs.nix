@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    #
+  ];
+
   home.packages = with pkgs; [
     fortune
     cowsay
@@ -21,5 +25,6 @@
     unar
     p7zip
     qrcode
+    ldns
   ];
 }

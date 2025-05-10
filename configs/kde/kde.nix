@@ -48,7 +48,7 @@
 
     panels = [
       {
-        location = top;
+        location = "top";
         widgets = [
           {
             kickoff = {
@@ -68,9 +68,15 @@
             };
           }
           {
-            applicationTitleBar = {
-              //
+            systemTray.items = {
+             shown = [
+                "org.kde.plasma.bluetooth"
+              ];
+             hidden = [];
             };
+          }
+          {
+            digitalClock = {};
           }
         ];
       }

@@ -26,5 +26,6 @@
     p7zip
     qrcode
     ldns
+    tor-browser-bundle-bin
   ];
 }

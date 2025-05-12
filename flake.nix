@@ -13,6 +13,16 @@
       inputs.home-manager.follows = "home-manager";
     };
     catppuccin.url = "github:catppuccin/nix";
+    #systems.url = "github:nix-systems/x86_64-linux";
+    #flake-utils = {
+    #  url = "github:numtide/flake-utils";
+    #  inputs.systems.follows = "systems";
+    #};
+    #anicli-ru = {
+    #  url = "github:vypivshiy/ani-cli-ru";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #  inputs.flake-utils.follows = "flake-utils";
+    #};
   };
 
   outputs = inputs@{ nixpkgs, home-manager, plasma-manager, catppuccin, ... }:
@@ -32,7 +42,7 @@
         ./configs/catppuccin.nix
         ./configs/librewolf.nix
         ./configs/irssi.nix
-        inputs.plasma-manager.homeManagerModules.plasma-manager
+        plasma-manager.homeManagerModules.plasma-manager
         catppuccin.homeModules.catppuccin
       ];
     };

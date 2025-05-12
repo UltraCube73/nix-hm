@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, anicli-ru, ... }:
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     #
@@ -27,5 +27,8 @@
     qrcode
     ldns
     tor-browser-bundle-bin
+    superTuxKart
+    gparted
+    #anicli-ru
   ];
 }

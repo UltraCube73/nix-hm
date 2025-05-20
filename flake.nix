@@ -35,13 +35,7 @@
       inherit pkgs;
       modules = [
         ./home.nix
-        ./configs/git.nix
-        ./configs/pkgs.nix
-        ./configs/kde/kde.nix
-        ./configs/vscode.nix
-        ./configs/catppuccin.nix
-        ./configs/librewolf.nix
-        ./configs/irssi.nix
+        ./configs
         plasma-manager.homeManagerModules.plasma-manager
         catppuccin.homeModules.catppuccin
       ];

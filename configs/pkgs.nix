@@ -28,7 +28,8 @@
     ldns
     tor-browser-bundle-bin
     superTuxKart
-    gparted
+    nmap
+    wget
     #anicli-ru
   ];
 }

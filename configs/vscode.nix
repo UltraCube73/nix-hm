@@ -5,6 +5,7 @@
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
+      ms-dotnettools.csharp
     ];
   };
 }

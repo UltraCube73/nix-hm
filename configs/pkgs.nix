@@ -1,4 +1,4 @@
-{ pkgs, lib, anicli-ru, ... }:
+{ pkgs, lib, ... }:
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     #
@@ -30,6 +30,7 @@
     superTuxKart
     nmap
     wget
-    #anicli-ru
+    fzf
+    wireshark
   ];
 }

@@ -13,16 +13,6 @@
       inputs.home-manager.follows = "home-manager";
     };
     catppuccin.url = "github:catppuccin/nix";
-    #systems.url = "github:nix-systems/x86_64-linux";
-    #flake-utils = {
-    #  url = "github:numtide/flake-utils";
-    #  inputs.systems.follows = "systems";
-    #};
-    #anicli-ru = {
-    #  url = "github:vypivshiy/ani-cli-ru";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #  inputs.flake-utils.follows = "flake-utils";
-    #};
   };
 
   outputs = inputs@{ nixpkgs, home-manager, plasma-manager, catppuccin, ... }:

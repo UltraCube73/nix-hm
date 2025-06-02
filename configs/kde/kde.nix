@@ -11,7 +11,7 @@
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
       iconTheme = "Papirus-Dark";
-      #wallpaper = "";
+      wallpaper = ./wallpaper.png;
     };
 
     session = {

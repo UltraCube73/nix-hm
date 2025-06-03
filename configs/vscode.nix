@@ -1,9 +1,5 @@
 { pkgs, lib, ... }:
 {
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "vscode-extension-ms-dotnettools-csharp"
-  ];
-
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;

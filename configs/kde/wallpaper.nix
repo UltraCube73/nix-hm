@@ -11,4 +11,5 @@ let
 in
 {
   programs.plasma.workspace.wallpaper = background-package;
+  programs.plasma.kscreenlocker.appearance.wallpaper = background-package;
 }

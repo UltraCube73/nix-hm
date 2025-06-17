@@ -5,7 +5,7 @@
     package = pkgs.vscodium;
     profiles.default = {
       userSettings = {
-        "editor.tabSize" = "2";
+        "editor.tabSize" = 2;
       };
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix

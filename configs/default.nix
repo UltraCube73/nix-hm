@@ -2,7 +2,6 @@
   imports = [
     ./kde
     ./catppuccin.nix
-    ./etc.nix
     ./git.nix
     ./irssi.nix
     ./librewolf.nix

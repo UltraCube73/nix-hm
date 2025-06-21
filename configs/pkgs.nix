@@ -32,5 +32,6 @@
     wget
     fzf
     wireshark
+    remmina
   ];
 }

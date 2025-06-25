@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home-pacages = with pkgs; [
+  home.packages = with pkgs; [
     wineWow64Packages.waylandFull
   ];
 }

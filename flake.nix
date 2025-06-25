@@ -20,15 +20,24 @@
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
+    baseModules = [
+      ./home.nix
+      ./configs
+      plasma-manager.homeManagerModules.plasma-manager
+      catppuccin.homeModules.catppuccin
+    ];
   in {
-    homeConfigurations.shooter = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      modules = [
-        ./home.nix
-        ./configs
-        plasma-manager.homeManagerModules.plasma-manager
-        catppuccin.homeModules.catppuccin
-      ];
+    homeConfigurations = {
+      "shooter@pc" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = baseModules ++ [
+          ./hosts/pc
+        ];
+      };
+      "shooter@nb" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = baseModules;
+      };
     };
   };
 }

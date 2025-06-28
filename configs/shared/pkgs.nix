@@ -24,7 +24,6 @@
     dbeaver-bin
     unar
     p7zip
-    qrcode
     ldns
     tor-browser-bundle-bin
     superTuxKart
@@ -33,5 +32,6 @@
     fzf
     wireshark
     waypipe
+    fastfetch
   ];
 }

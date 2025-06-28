@@ -1,6 +1,5 @@
 {
   imports = [
-    ./kde
     ./catppuccin.nix
     ./git.nix
     ./irssi.nix

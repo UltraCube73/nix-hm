@@ -22,7 +22,7 @@
     pkgs = import nixpkgs { inherit system; };
     baseModules = [
       ./home.nix
-      ./configs
+      ./configs/shared
       plasma-manager.homeManagerModules.plasma-manager
       catppuccin.homeModules.catppuccin
     ];
@@ -36,7 +36,9 @@
       };
       "shooter@nb" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = baseModules;
+        modules = baseModules ++ [
+          ./configs/kde/kde.nix
+        ];
       };
     };
   };

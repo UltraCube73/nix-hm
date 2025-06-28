@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  background-package = pkgs.stdenvNoCC.mkDerivation {
-    name = "kde-wallpaper";
+  background = pkgs.stdenvNoCC.mkDerivation {
+    name = "wallpaper";
     src = ./.;
     dontUnpack = true;
     installPhase = ''
@@ -10,6 +10,6 @@ let
   };
 in
 {
-  programs.plasma.workspace.wallpaper = background-package;
-  programs.plasma.kscreenlocker.appearance.wallpaper = background-package;
+  programs.plasma.workspace.wallpaper = background;
+  programs.plasma.kscreenlocker.appearance.wallpaper = background;
 }

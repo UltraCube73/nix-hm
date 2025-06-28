@@ -4,6 +4,17 @@ let
   down = "j";
   up = "k";
   right = "l";
+  orange = "#ffc814";
+  white = "#ffffff";
+  black = "#000000";
+  background = pkgs.stdenvNoCC.mkDerivation {
+    name = "wallpaper";
+    src = ./.;
+    dontUnpack = true;
+    installPhase = ''
+      cp $src/wallpaper.png $out
+    '';
+  };
 in {
   wayland.windowManager.sway = {
     enable = true;
@@ -15,6 +26,55 @@ in {
       startup = [
         #{command = "spectacle";}
       ];
+      output = {
+        HDMI-A-1 = {
+          bg = "${background} fill";
+          res = "1920x1080";
+          pos = "1280 0";
+        };
+        DP-1 = {
+          bg = "${orange} solid_color";
+          res = "1280x1024";
+          pos = "0 0";
+        };
+      };
+      workspaceOutputAssign = [
+        { output = "DP-1"; workspace = "1"; }
+        { output = "DP-1"; workspace = "2"; }
+        { output = "DP-1"; workspace = "3"; }
+        { output = "DP-1"; workspace = "4"; }
+        { output = "DP-1"; workspace = "5"; }
+        { output = "HDMI-A-1"; workspace = "6"; }
+        { output = "HDMI-A-1"; workspace = "7"; }
+        { output = "HDMI-A-1"; workspace = "8"; }
+        { output = "HDMI-A-1"; workspace = "9"; }
+        { output = "HDMI-A-1"; workspace = "10"; }
+      ];
+      defaultWorkspace = "workspace number 6";
+      window = {
+        border = 0;
+        titlebar = false;
+      };
+      floating = {
+        border = 2;
+      };
+      colors = rec {
+        focused = {
+          background = orange;
+          border = orange;
+          childBorder = orange;
+          indicator = orange;
+          text = black;
+        };
+        focusedInactive = {
+          background = white;
+          border = white;
+          childBorder = white;
+          indicator = white;
+          text = black;
+        };
+        unfocused = focusedInactive;
+      };
       bars = [{
         position = "top";
         command = "swaybar";
@@ -22,27 +82,28 @@ in {
           size = 10.0;
         };
         statusCommand = "while date +'%Y-%m-%d %X'; do sleep 1; done";
-        colors = {
+        colors = rec {
           statusline = "#000000";
           background = "#ffffff";
-          activeWorkspace = rec {
-            border = "#ffc814";
-            background = border;
-            text = "#ffffff"; 
+          focusedWorkspace = {
+            border = orange;
+            background = orange;
+            text = "#000000"; 
           };
-          inactiveWorkspace = {
-            border = "#32323200";
-            background = "#32323200";
-            text = "#5c5c5c";
+          activeWorkspace = {
+            border = "#ffffff";
+            background = "#ffffff";
+            text = "#000000";
           };
+          inactiveWorkspace = activeWorkspace;
         };
       }];
       keybindings = {
         "${modifier}+d" = "exec ${pkgs.rofi-wayland}/bin/rofi -show drun";
-        #"${modifier}+Return" = "exec $term";
+        "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
         "${modifier}+Shift+q" = "kill";
         "${modifier}+Shift+c" = "reload";
-        "${modifier}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
+        "${modifier}+Shift+e" = "swaymsg exit";
         "${modifier}+${left}" = "focus left";
         "${modifier}+${down}" = "focus down";
         "${modifier}+${up}" = "focus up";
@@ -94,3 +155,5 @@ in {
     };
   };
 }
+# eza
+# nms

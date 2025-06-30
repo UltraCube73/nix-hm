@@ -9,6 +9,17 @@ let
   black = "#000000";
   grey = "#cccccc";
 in {
+  services.mako = {
+    enable = true;
+    settings = {
+      default-timeout = 10000;
+      history = 0;
+      background-color = orange;
+      border-color = white;
+      text-color = black;
+    };
+  };
+
   wayland.windowManager.sway = {
     enable = true;
     package = null;
@@ -127,6 +138,8 @@ in {
         "${modifier}+Shift+space" = "floating toggle";
         "${modifier}+space" = "focus mode_toggle";
         "${modifier}+a" = "focus parent";
+        "${modifier}+Shift+b" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.bluetuith}/bin/bluetuith";
+        "${modifier}+Shift+f" = "exec ${pkgs.pcmanfm}/bin/pcmanfm";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change +2.5%";
         "XF86AudioLowerVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change -2.5%";
         "XF86AudioMute" = "exec ${pkgs.pw-volume}/bin/pw-volume mute toggle";

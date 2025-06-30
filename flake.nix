@@ -31,13 +31,14 @@
       "shooter@pc" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = baseModules ++ [
+          ./configs/sway
           ./hosts/pc
         ];
       };
       "shooter@nb" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = baseModules ++ [
-          ./configs/kde/kde.nix
+          ./configs/kde
         ];
       };
     };

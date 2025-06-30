@@ -1,5 +1,6 @@
 {
   imports = [
+    ./bash.nix
     ./catppuccin.nix
     ./git.nix
     ./irssi.nix

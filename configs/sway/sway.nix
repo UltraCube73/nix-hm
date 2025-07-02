@@ -9,6 +9,11 @@ let
   black = "#000000";
   grey = "#cccccc";
 in {
+  home.packages = with pkgs; [
+    pcmanfm
+    kdePackages.kate
+  ];
+
   services.mako = {
     enable = true;
     settings = {
@@ -30,6 +35,10 @@ in {
       startup = [
         #{command = "spectacle";}
       ];
+      input."*" = {
+        xkb_layout = "us,ru";
+        xkb_options = "grp:shift_alt_toggle";
+      };
       output = lib.mkDefault {
         "*" = {
           bg = "${orange} solid_color";

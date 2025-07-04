@@ -37,7 +37,7 @@ in {
       ];
       input."*" = {
         xkb_layout = "us,ru";
-        xkb_options = "grp:shift_alt_toggle";
+        xkb_options = "grp:alt_shift_toggle";
       };
       output = lib.mkDefault {
         "*" = {
@@ -46,12 +46,16 @@ in {
       };
       defaultWorkspace = lib.mkDefault "workspace number 1";
       window = {
-        border = 0;
+        border = 3;
         titlebar = false;
       };
-      floating = {
-        border = 2;
+      gaps = {
+        outer = 5;
+        inner = 5;
       };
+      #floating = {
+      #  border = 2;
+      #};
       colors = rec {
         focused = {
           background = white;

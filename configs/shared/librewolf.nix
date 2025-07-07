@@ -18,11 +18,6 @@
           installation_mode = "force_installed";
           private_browsing = "true";
         };
-        "plasma-browser-integration@kde.org" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4298512/plasma_integration-1.9.1.xpi";
-          installation_mode = "force_installed";
-          private_browsing = "true";
-        };
       };
     };
   };

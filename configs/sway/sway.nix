@@ -9,11 +9,6 @@ let
   black = "#000000";
   grey = "#cccccc";
 in {
-  home.packages = with pkgs; [
-    pcmanfm
-    kdePackages.kate
-  ];
-
   services.mako = {
     enable = true;
     settings = {
@@ -152,7 +147,7 @@ in {
         "${modifier}+space" = "focus mode_toggle";
         "${modifier}+a" = "focus parent";
         "${modifier}+Shift+b" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.bluetuith}/bin/bluetuith";
-        "${modifier}+Shift+f" = "exec ${pkgs.pcmanfm}/bin/pcmanfm";
+        "${modifier}+Shift+f" = "exec ${pkgs.pcmanfm-qt}/bin/pcmanfm-qt";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change +2.5%";
         "XF86AudioLowerVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change -2.5%";
         "XF86AudioMute" = "exec ${pkgs.pw-volume}/bin/pw-volume mute toggle";

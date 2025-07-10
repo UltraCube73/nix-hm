@@ -1,5 +1,5 @@
 {
-  catppuccin.vscode.enable = true;
-  catppuccin.vscode.flavor = "mocha";
-  catppuccin.vscode.accent = "blue";
+  catppuccin.vscode.profiles.default.enable = true;
+  catppuccin.vscode.profiles.default.flavor = "mocha";
+  catppuccin.vscode.profiles.default.accent = "blue";
 }

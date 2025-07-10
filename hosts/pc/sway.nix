@@ -11,6 +11,9 @@ let
   };
 in {
   wayland.windowManager.sway.config = {
+    startup = [
+      {command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-A-1 --primary"; always = true;}
+    ];
     output = {
       HDMI-A-1 = {
         bg = "${background} fill";

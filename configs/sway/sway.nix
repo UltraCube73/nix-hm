@@ -26,9 +26,8 @@ in {
     config = rec {
       modifier = "Mod4";
       terminal = "foot"; 
-      # keybindings = [];
       startup = [
-        #{command = "spectacle";}
+        {command = "waybar";}
       ];
       input."*" = {
         xkb_layout = "us,ru";
@@ -68,33 +67,7 @@ in {
         };
         unfocused = focusedInactive;
       };
-      bars = [{
-        position = "top";
-        command = "swaybar";
-        fonts = {
-          size = 10.0;
-        };
-        statusCommand = "while date +'%Y-%m-%d %X'; do sleep 1; done";
-        colors = rec {
-          statusline = black;
-          background = white;
-          focusedWorkspace = {
-            border = orange;
-            background = orange;
-            text = black; 
-          };
-          activeWorkspace = {
-            border = grey;
-            background = grey;
-            text = black;
-          };
-          inactiveWorkspace = {
-            border = white;
-            background = white;
-            text = black;
-          };
-        };
-      }];
+      bars = [];
       keybindings = {
         "${modifier}+d" = "exec ${pkgs.rofi-wayland}/bin/rofi -show drun";
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";

@@ -10,6 +10,15 @@ let
     '';
   };
 in {
+  programs.waybar.settings.mainBar.output = [ "HDMI-A-1" ];
+  programs.waybar.settings.secondBar = {
+    layer = "top";
+    position = "top";
+    height = 25;
+    output = [ "DP-1" ];
+    modules-left = [ "sway/workspaces" "sway/mode" ];
+    modules-center = [ "sway/window" ];
+  };
   wayland.windowManager.sway.config = {
     startup = [
       {command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-A-1 --primary"; always = true;}

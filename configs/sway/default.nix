@@ -5,5 +5,6 @@
     ./kitty.nix
     ./pkgs.nix
     ./sway.nix
+    ./waybar.nix
   ];
 }

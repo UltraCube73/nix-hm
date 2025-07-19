@@ -22,12 +22,14 @@ in {
   wayland.windowManager.sway.config = {
     output = {
       HDMI-A-1 = {
-        bg = "${background} fill";
+        #bg = "${background} fill";
+        bg = "#ffffff solid_color";
         res = "1920x1080";
         pos = "1280 0";
       };
       DP-1 = {
-        bg = "${orange} solid_color";
+        #bg = "${orange} solid_color";
+        bg = "#ffffff solid_color";
         res = "1280x1024";
         pos = "0 0";
       };

@@ -28,6 +28,7 @@ in {
       terminal = "foot"; 
       startup = [
         {command = "waybar";}
+        {command = "${pkgs.wl-clipboard}/bin/wl-paste -t text --watch ${pkgs.clipman}/bin/clipman store --no-persist";}
       ];
       input."*" = {
         xkb_layout = "us,ru";
@@ -35,7 +36,7 @@ in {
       };
       output = lib.mkDefault {
         "*" = {
-          bg = "${orange} solid_color";
+          bg = "${white} solid_color";
         };
       };
       defaultWorkspace = lib.mkDefault "workspace number 1";
@@ -47,15 +48,18 @@ in {
         outer = 5;
         inner = 5;
       };
-      #floating = {
-      #  border = 2;
-      #};
+      floating = {
+        titlebar = false;
+        criteria = [
+          {class = "Wine";}
+        ];
+      };
       colors = rec {
         focused = {
           background = white;
-          border = white;
-          childBorder = white;
-          indicator = white;
+          border = black;
+          childBorder = black;
+          indicator = black;
           text = black;
         };
         focusedInactive = {
@@ -130,5 +134,4 @@ in {
     };
   };
 }
-# eza
 # nms

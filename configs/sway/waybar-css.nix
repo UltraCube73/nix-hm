@@ -1,57 +1,24 @@
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    nerd-fonts.departure-mono
+  ];
   programs.waybar.style = ''
     * {
         font-family: "DepartureMono Nerd Font";
         font-size: 13px;
+        color: #000000;
     }
 
     window#waybar {
-        background-color: rgba(43, 48, 59, 0.5);
-        border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-        color: #ffffff;
-        transition-property: background-color;
-        transition-duration: .5s;
-    }
-
-    window#waybar.hidden {
-        opacity: 0.2;
-    }
-
-    /*
-    window#waybar.empty {
-        background-color: transparent;
-    }
-    window#waybar.solo {
-        background-color: #FFFFFF;
-    }
-    */
-
-    window#waybar.termite {
-        background-color: #3F3F3F;
-    }
-
-    window#waybar.chromium {
-        background-color: #000000;
-        border: none;
+        background-color: #ffffff;
+        border-bottom: 3px solid #000000;
     }
 
     button {
-        /* Use box-shadow instead of border so the text isn't offset */
         box-shadow: inset 0 -3px transparent;
-        /* Avoid rounded borders under each button name */
         border: none;
         border-radius: 0;
-    }
-
-    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-    button:hover {
-        background: inherit;
-        box-shadow: inset 0 -3px #ffffff;
-    }
-
-    /* you can set a style on hover for any module like this */
-    #pulseaudio:hover {
-        background-color: #a37800;
     }
 
     #workspaces button {
@@ -60,13 +27,9 @@
         color: #ffffff;
     }
 
-    #workspaces button:hover {
-        background: rgba(0, 0, 0, 0.2);
-    }
-
     #workspaces button.focused {
-        background-color: #64727D;
-        box-shadow: inset 0 -3px #ffffff;
+        /* box-shadow: inset 0 -3px #ffffff; */
+        box-shadow: inset 0px 0px 0px 3px #000000;
     }
 
     #workspaces button.urgent {
@@ -115,7 +78,8 @@
     }
 
     #clock {
-        background-color: #64727D;
+        background-color: #000000;
+        color: #ffffff
     }
 
     #battery {

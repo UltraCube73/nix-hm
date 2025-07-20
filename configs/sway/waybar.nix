@@ -2,8 +2,6 @@
 {
   home.packages = with pkgs; [
     playerctl
-    nerd-fonts.departure-mono
-    nerd-fonts.ubuntu
   ];
   programs.waybar = {
     enable = true;
@@ -13,17 +11,26 @@
         position = "top";
         height = 25;
         output = lib.mkDefault [ "*" ];
-        modules-left = [ "sway/workspaces" "sway/mode" ];
+        modules-left = [ "sway/workspaces" ];
         modules-center = [ "sway/window" ];
         modules-right = [ "mpris" "tray" "sway/language" "cpu" "memory" "network" "battery" "systemd-failed-units" "clock" ];
+        "sway/workspaces" = {
+          disable-scroll = true;
+          disable-click = true;
+        };
         tray = {
           spacing = 5;
         };
         cpu = {
-          format = " {}%";
+          format = " {usage}%";
           interval = 2;
         };
-        memory.interval = 2;
+        memory = {
+          format = " {}%";
+          interval = 2;
+        };
+        #systemd-failed-units.hide-on-ok = false;
+        systemd-failed-units.format = "✗ {nr_failed}";
         mpris = {
           format = "{status_icon} {artist} - {title}";
           status-icons = {
@@ -34,8 +41,8 @@
         };
         network = {
           interval = 2;
-          format-ethernet = "⇅ {bandwidthDownBytes} {bandwidthUpBytes}";
-          format-wifi = "{essid} {signalStrength}% ⇅ {bandwidthDownBytes} {bandwidthUpBytes}";
+          format-ethernet = "{ipaddr}";
+          format-wifi = " {essid} {signalStrength}% {ipaddr}";
           format-disconnected = "no link";
         };
       };

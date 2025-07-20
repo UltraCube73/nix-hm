@@ -18,6 +18,10 @@ in {
     output = [ "DP-1" ];
     modules-left = [ "sway/workspaces" "sway/mode" ];
     modules-center = [ "sway/window" ];
+    "sway/workspaces" = {
+      disable-scroll = true;
+      disable-click = true;
+    };
   };
   wayland.windowManager.sway.config = {
     output = {

@@ -125,6 +125,7 @@ in {
         "${modifier}+a" = "focus parent";
         "${modifier}+Shift+b" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.bluetuith}/bin/bluetuith";
         "${modifier}+Shift+f" = "exec ${pkgs.pcmanfm-qt}/bin/pcmanfm-qt";
+        "${modifier}+Shift+n" = "exec ${pkgs.kitty}/bin/kitty nmtui";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change +2.5%";
         "XF86AudioLowerVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change -2.5%";
         "XF86AudioMute" = "exec ${pkgs.pw-volume}/bin/pw-volume mute toggle";

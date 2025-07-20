@@ -1,15 +1,5 @@
-{ pkgs, ... }:
-let
-  orange = "#ffc814";
-  background = pkgs.stdenvNoCC.mkDerivation {
-    name = "wallpaper";
-    src = ./.;
-    dontUnpack = true;
-    installPhase = ''
-      cp $src/wallpaper.png $out
-    '';
-  };
-in {
+{ pkgs, config, ... }:
+{
   programs.waybar.settings.mainBar.output = [ "HDMI-A-1" ];
   programs.waybar.settings.secondBar = {
     layer = "top";
@@ -26,8 +16,8 @@ in {
   wayland.windowManager.sway.config = {
     output = {
       HDMI-A-1 = {
-        #bg = "${background} fill";
-        bg = "#ffffff solid_color";
+        bg = "${config.lib.wallpaper} fill";
+        #bg = "#ffffff solid_color";
         res = "1920x1080";
         pos = "1280 0";
       };

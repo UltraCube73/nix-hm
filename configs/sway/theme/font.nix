@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     nerd-fonts.departure-mono
+    nerd-fonts.droid-sans-mono
   ];
   fonts.fontconfig = {
     enable = true;
@@ -12,4 +13,6 @@
       emoji = serif;
     };
   };
+  programs.vscode.profiles.default.userSettings."editor.fontFamily" = "'DroidSansM Nerd Font Mono', 'monospace', monospace";
+  programs.vscode.profiles.default.userSettings."terminal.integrated.fontSize" = 12;
 }

@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 let
   left = "h";
   down = "j";
@@ -36,7 +36,7 @@ in {
       };
       output = lib.mkDefault {
         "*" = {
-          bg = "${white} solid_color";
+          bg = "${config.lib.wallpaper} fill";
         };
       };
       defaultWorkspace = lib.mkDefault "workspace number 1";

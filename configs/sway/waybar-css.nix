@@ -1,8 +1,4 @@
-{ pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    nerd-fonts.departure-mono
-  ];
   programs.waybar.style = ''
     * {
         font-family: "DepartureMono Nerd Font";
@@ -21,14 +17,18 @@
         border-radius: 0;
     }
 
+    button:hover {
+        background: inherit;
+        box-shadow: inherit;
+    }
+
     #workspaces button {
-        padding: 0 5px;
+        padding: 0 3px;
         background-color: transparent;
         color: #ffffff;
     }
 
-    #workspaces button.focused {
-        /* box-shadow: inset 0 -3px #ffffff; */
+    #workspaces button.visible {
         box-shadow: inset 0px 0px 0px 3px #000000;
     }
 
@@ -45,22 +45,12 @@
     #battery,
     #cpu,
     #memory,
-    #disk,
-    #temperature,
-    #backlight,
     #network,
-    #pulseaudio,
-    #wireplumber,
-    #custom-media,
     #tray,
-    #mode,
-    #idle_inhibitor,
-    #scratchpad,
-    #power-profiles-daemon,
-    #mpd,
+    #mpris,
     #language {
-        padding: 0 10px;
-        color: #ffffff;
+        padding: 0 7px 0 10px;
+        color: #000000;
         box-shadow: inset 0 3px 0 #000000, inset 3px 0 0 #000000, inset 0 -3px 0 #000000;
     }
 
@@ -118,7 +108,6 @@
 
     #cpu {
         background-color: #2ecc71;
-        color: #000000;
     }
 
     #memory {
@@ -152,7 +141,6 @@
 
     #language {
         background: #00b093;
-        padding: 0 5px;
         margin: 0px;
     }
   '';

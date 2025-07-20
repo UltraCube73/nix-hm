@@ -13,6 +13,7 @@ let
       imagemagick
       gtk3
     ];
+    #cp -vrf ./pixelitos-dark/folder-colors/blue/* ./pixelitos-dark/
     installPhase = ''
       patchShebangs pixelitos-dark/compile-icons.sh
       ./pixelitos-dark/compile-icons.sh

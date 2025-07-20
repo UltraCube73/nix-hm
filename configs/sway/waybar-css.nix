@@ -57,9 +57,11 @@
     #idle_inhibitor,
     #scratchpad,
     #power-profiles-daemon,
-    #mpd {
+    #mpd,
+    #language {
         padding: 0 10px;
         color: #ffffff;
+        box-shadow: inset 0 3px 0 #000000, inset 3px 0 0 #000000, inset 0 -3px 0 #000000;
     }
 
     #window,
@@ -110,25 +112,6 @@
         animation-direction: alternate;
     }
 
-    #power-profiles-daemon {
-        padding-right: 15px;
-    }
-
-    #power-profiles-daemon.performance {
-        background-color: #f53c3c;
-        color: #ffffff;
-    }
-
-    #power-profiles-daemon.balanced {
-        background-color: #2980b9;
-        color: #ffffff;
-    }
-
-    #power-profiles-daemon.power-saver {
-        background-color: #2ecc71;
-        color: #000000;
-    }
-
     label:focus {
         background-color: #000000;
     }
@@ -142,10 +125,6 @@
         background-color: #9b59b6;
     }
 
-    #disk {
-        background-color: #964B00;
-    }
-
     #backlight {
         background-color: #90b1b1;
     }
@@ -156,47 +135,6 @@
 
     #network.disconnected {
         background-color: #f53c3c;
-    }
-
-    #pulseaudio {
-        background-color: #f1c40f;
-        color: #000000;
-    }
-
-    #pulseaudio.muted {
-        background-color: #90b1b1;
-        color: #2a5c45;
-    }
-
-    #wireplumber {
-        background-color: #fff0f5;
-        color: #000000;
-    }
-
-    #wireplumber.muted {
-        background-color: #f53c3c;
-    }
-
-    #custom-media {
-        background-color: #66cc99;
-        color: #2a5c45;
-        min-width: 100px;
-    }
-
-    #custom-media.custom-spotify {
-        background-color: #66cc99;
-    }
-
-    #custom-media.custom-vlc {
-        background-color: #ffa000;
-    }
-
-    #temperature {
-        background-color: #f0932b;
-    }
-
-    #temperature.critical {
-        background-color: #eb4d4b;
     }
 
     #tray {
@@ -212,83 +150,10 @@
         background-color: #eb4d4b;
     }
 
-    #idle_inhibitor {
-        background-color: #2d3436;
-    }
-
-    #idle_inhibitor.activated {
-        background-color: #ecf0f1;
-        color: #2d3436;
-    }
-
-    #mpd {
-        background-color: #66cc99;
-        color: #2a5c45;
-    }
-
-    #mpd.disconnected {
-        background-color: #f53c3c;
-    }
-
-    #mpd.stopped {
-        background-color: #90b1b1;
-    }
-
-    #mpd.paused {
-        background-color: #51a37a;
-    }
-
     #language {
         background: #00b093;
-        color: #740864;
         padding: 0 5px;
-        margin: 0 5px;
-        min-width: 16px;
-    }
-
-    #keyboard-state {
-        background: #97e1ad;
-        color: #000000;
-        padding: 0 0px;
-        margin: 0 5px;
-        min-width: 16px;
-    }
-
-    #keyboard-state > label {
-        padding: 0 5px;
-    }
-
-    #keyboard-state > label.locked {
-        background: rgba(0, 0, 0, 0.2);
-    }
-
-    #scratchpad {
-        background: rgba(0, 0, 0, 0.2);
-    }
-
-    #scratchpad.empty {
-      background-color: transparent;
-    }
-
-    #privacy {
-        padding: 0;
-    }
-
-    #privacy-item {
-        padding: 0 5px;
-        color: white;
-    }
-
-    #privacy-item.screenshare {
-        background-color: #cf5700;
-    }
-
-    #privacy-item.audio-in {
-        background-color: #1ca000;
-    }
-
-    #privacy-item.audio-out {
-        background-color: #0069d4;
+        margin: 0px;
     }
   '';
 }

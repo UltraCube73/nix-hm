@@ -38,7 +38,7 @@
       "shooter@nb" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = baseModules ++ [
-          ./configs/kde
+          ./configs/sway
         ];
       };
     };

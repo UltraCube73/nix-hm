@@ -23,7 +23,7 @@
       };
       DP-1 = {
         #bg = "${orange} solid_color";
-        bg = "#ffffff solid_color";
+        bg = "#cccccc solid_color";
         res = "1280x1024";
         pos = "0 0";
       };

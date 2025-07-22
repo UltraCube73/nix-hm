@@ -142,6 +142,7 @@
     #language {
         background: #00b093;
         margin: 0px;
+        min-width: 17px;
     }
   '';
 }

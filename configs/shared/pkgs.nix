@@ -32,6 +32,5 @@
     fzf
     wireshark
     waypipe
-    fastfetch
   ];
 }

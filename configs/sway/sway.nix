@@ -76,7 +76,7 @@ in {
         "${modifier}+d" = "exec ${pkgs.rofi-wayland}/bin/rofi -show drun";
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
         "${modifier}+Shift+q" = "kill";
-        "${modifier}+Shift+c" = "reload";
+        "${modifier}+Shift+r" = "reload";
         "${modifier}+Shift+e" = "exec swaymsg exit";
         "${modifier}+${left}" = "focus left";
         "${modifier}+${down}" = "focus down";
@@ -126,6 +126,8 @@ in {
         "${modifier}+Shift+b" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.bluetuith}/bin/bluetuith";
         "${modifier}+Shift+f" = "exec ${pkgs.pcmanfm-qt}/bin/pcmanfm-qt";
         "${modifier}+Shift+n" = "exec ${pkgs.kitty}/bin/kitty nmtui";
+        "${modifier}+Shift+v" = "exec ${pkgs.librewolf}/bin/librewolf";
+        "${modifier}+Shift+c" = "exec ${pkgs.vscodium}/bin/codium";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change +2.5%";
         "XF86AudioLowerVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change -2.5%";
         "XF86AudioMute" = "exec ${pkgs.pw-volume}/bin/pw-volume mute toggle";

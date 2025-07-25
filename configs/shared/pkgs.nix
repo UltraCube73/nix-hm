@@ -1,6 +1,6 @@
 { pkgs, lib, ... }:
 {
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+  allowedUnfree = [
     "vscode-extension-ms-dotnettools-csharp"
   ];
 

@@ -57,17 +57,17 @@ in {
       colors = rec {
         focused = {
           background = white;
-          border = black;
-          childBorder = black;
-          indicator = black;
+          border = white;
+          childBorder = white;
+          indicator = white;
           text = black;
         };
         focusedInactive = {
           background = grey;
-          border = grey;
-          childBorder = grey;
-          indicator = grey;
-          text = black;
+          border = black;
+          childBorder = black;
+          indicator = black;
+          text = white;
         };
         unfocused = focusedInactive;
       };
@@ -126,8 +126,9 @@ in {
         "${modifier}+Shift+b" = "exec ${pkgs.kitty}/bin/kitty ${pkgs.bluetuith}/bin/bluetuith";
         "${modifier}+Shift+f" = "exec ${pkgs.pcmanfm-qt}/bin/pcmanfm-qt";
         "${modifier}+Shift+n" = "exec ${pkgs.kitty}/bin/kitty nmtui";
-        "${modifier}+Shift+v" = "exec ${pkgs.librewolf}/bin/librewolf";
+        "${modifier}+Shift+v" = "exec ${pkgs.pwvucontrol}/bin/pwvucontrol";
         "${modifier}+Shift+c" = "exec ${pkgs.vscodium}/bin/codium";
+        "${modifier}+Shift+x" = "exec ${pkgs.librewolf}/bin/librewolf";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change +2.5%";
         "XF86AudioLowerVolume" = "exec ${pkgs.pw-volume}/bin/pw-volume change -2.5%";
         "XF86AudioMute" = "exec ${pkgs.pw-volume}/bin/pw-volume mute toggle";

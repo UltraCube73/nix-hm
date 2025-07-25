@@ -13,7 +13,7 @@
         output = lib.mkDefault [ "*" ];
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "sway/window" ];
-        modules-right = [ "mpris" "tray" "sway/language" "cpu" "memory" "network" "battery" "systemd-failed-units" "clock" ];
+        modules-right = [ "mpris" "tray" "sway/language" "cpu" "memory" "network" "battery" "clock" ];
         "sway/workspaces" = {
           disable-scroll = true;
           disable-click = true;
@@ -29,8 +29,6 @@
           format = " {}%";
           interval = 2;
         };
-        #systemd-failed-units.hide-on-ok = false;
-        systemd-failed-units.format = "✗ {nr_failed}";
         mpris = {
           format = "{status_icon} {artist} - {title}";
           status-icons = {
@@ -41,7 +39,7 @@
         };
         network = {
           interval = 2;
-          format-ethernet = "{ipaddr}";
+          format-ethernet = "󰈀 {ipaddr}";
           format-wifi = " {essid} {signalStrength}% {ipaddr}";
           format-disconnected = "no link";
         };

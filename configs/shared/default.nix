@@ -8,6 +8,7 @@
     ./librewolf.nix
     ./mime.nix
     ./pkgs.nix
+    ./unfree.nix
     ./vscode.nix
   ];
 }

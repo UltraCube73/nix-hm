@@ -72,6 +72,7 @@ in {
         unfocused = focusedInactive;
       };
       bars = [];
+      bindkeysToCode = true;
       keybindings = {
         "${modifier}+d" = "exec ${pkgs.rofi-wayland}/bin/rofi -show drun";
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";

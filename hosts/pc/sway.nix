@@ -14,15 +14,16 @@
     };
   };
   wayland.windowManager.sway.config = {
+    startup = [
+      {command = "sleep 5; openrgb --startminimized";}
+    ];
     output = {
       HDMI-A-1 = {
         bg = "${config.lib.wallpaper} fill";
-        #bg = "#ffffff solid_color";
         res = "1920x1080";
         pos = "1280 0";
       };
       DP-1 = {
-        #bg = "${orange} solid_color";
         bg = "#cccccc solid_color";
         res = "1280x1024";
         pos = "0 0";

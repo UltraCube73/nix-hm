@@ -5,6 +5,7 @@
     ./fastfetch.nix
     ./git.nix
     ./irssi.nix
+    ./languages.nix
     ./librewolf.nix
     ./mime.nix
     ./pkgs.nix
